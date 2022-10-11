@@ -20,7 +20,7 @@ loadReport <- function(x, file) {
   ## Draw the text
   par(mar=c(0,0,0,0), usr=c(0,1,0,1))
   txt <- capture.output(x)
-  text(0, 1, paste(txt, collapse="\n"), family="mono", adj=c(0,1))
+  text(0, 1, paste(txt[-c(1:5)], collapse="\n"), family="mono", adj=c(0,1))
   ## 6 diagnostic plots
   AA.lo <- setLayout(num.cols=2L, num.rows=3L)
   for(i in seq(6)) {
